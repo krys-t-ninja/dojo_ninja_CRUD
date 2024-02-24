@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>New Ninja</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href='{{ url_for('static', filename='/style.css') }}'>
+  <script type='text/javascript' src='{{ url_for('static', filename='/script.js') }}'></script>
+
+
+</head>
+<header class="top-header">
+</header>
+
+<div id="mainCoantiner">
+  <div class="main-header">
+    <div class="header-social">
+      <ul>
+        <li><a id="nmberone">1</a></li>
+        <li><a id="nmbertwo">2</a></li>
+        <li><a id="numberthree">3</a></li>
+        <li><a>4</a></li>
+      </ul>
+    </div>
+    <div class="folio-btn">
+      <a class="folio-btn-item ajax" href="https://codepen.io/uiswarup/full/WNLdjqN" target="_blank"><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span><span class="folio-btn-dot"></span></a>
+    </div>
+  </div>
+
+  <!--dust particle-->
+  <div>
+    <div class="starsec"></div>
+    <div class="starthird"></div>
+    <div class="starfourth"></div>
+    <div class="starfifth"></div>
+  </div>
+  <!--Dust particle end--->
+
+  <div class="container text-center text-dark mt-5">
+    <div class="row">
+    <div class="col-12"> 
+      <a href="/dojos" class="btn btn-block  logn-btn btn-colorboard">Home</a> 
+    </div>
+  </div>
+            <div class="card">
+              <div class="card-body wow-bg " id="formBg">
+                          <div class="col-xl-12 col-md-12 col-md-5">
+
+                <h3 class="colorboard">WELCOME</h3>
+
+                <p class="colorboard">New Ninja</p>
+                <form action="/create/ninja" method="post" >
+                  <label for="dojo">Dojo</label>
+                <select class="form-select" name="dojo_id">
+                {% for dojo in dojos %}  
+                <option value="{{dojo.id}}">{{dojo.name}}</option>
+                  {% endfor %}
+                </select>
+                
+                <div class="input-group mb-3"> <input type="text" name="first_name" class="form-control  textbox-dg" placeholder="First Name"> </div>
+                <div class="input-group mb-4"> <input type="text " name="last_name" class="form-control textbox-dg" placeholder="Last Name"> </div>
+                <div class="input-group mb-6"> <input type="text" name="age" class="form-control textbox-dg" placeholder="Age"> </div>
+                <div class="row ">
+                  <div class="col-12 "> <input type="submit" class="btn btn-colorboard btn-block logn-btn" value="NEW NINJA"> </div>
+                </div>
+                </form>
+
+          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+</body>
+</html>
+
+                
